@@ -14,19 +14,48 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText nameEditText;
+    public static String TAG = MainActivity.class.getSimpleName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.i(TAG,"oncreate");
         nameEditText = findViewById(R.id.etName);
         Employee venkat = new Employee("santhosh",123,true);
         venkat.setEname("Santhosh");
         Student santhosh = new Student("Santhosh",123,true);
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.e(TAG,"onStart");
 
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.w(TAG,"onresum");
+    }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.e(TAG,"ondestroy");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.v(TAG,"onpaus");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.w(TAG,"onstop");
+    }
 
     public void handleClick(View viewClicked) {
         switch (viewClicked.getId()){
