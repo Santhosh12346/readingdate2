@@ -15,7 +15,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     EditText nameEditText;
     public static String TAG = MainActivity.class.getSimpleName();
-    @Override
+    @Override//add a comment
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
