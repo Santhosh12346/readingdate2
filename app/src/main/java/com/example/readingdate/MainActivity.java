@@ -66,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(dialIntent);
             case R.id.btnalarm:
                 createAlarm("almarm set",12,1);
-
         }
 
     }
